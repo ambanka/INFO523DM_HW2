@@ -6,11 +6,13 @@
 
 # Values in column names 
 
+# I like to read in my libraries at the top whenever possible
+library(reshape2)
+
 raw <- read.csv("data/pew.csv", check.names = F)
 
 head(raw)
 
-library(reshape2)
 tidy <- melt(raw, id = "religion")
 
 head(raw)
